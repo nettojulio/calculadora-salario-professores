@@ -20,15 +20,3 @@ Por fim, o programa deverá imprimir o resultado, exibindo o nome do professor e
 O código pode ser desenvolvido em qualquer linguagem de programação, utilizando classes ou estruturas para resolver o problema.
 
 ATENÇÃO: O código deverá estar versionado no GitHub
-
-### ⚙️ Cofigurações
-
-- Para execução do projeto, verifique se o Docker está ativo e execute os comandos abaixo:
-
-```bash
-make docker-up
-```
-
-```bash
-make run
-```

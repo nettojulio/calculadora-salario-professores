@@ -2,21 +2,20 @@ package app
 
 import (
 	"calculadora-salario-professores/internal/models"
-	"calculadora-salario-professores/internal/sql"
 	"calculadora-salario-professores/internal/tools"
 	"fmt"
 )
 
 func Run() {
 	var cliOptions int64
+	professores := []models.ImplProfessor{}
 	for cliOptions != 3 {
 		cliOptions = tools.GetIntegerValues("Opções\n1 - Cadastrar Professores\n2 - Listar Professores\n3 - SAIR\nEscolha uma das opções: ")
 		switch cliOptions {
 		case 1:
 			professor := professorFactory()
-			sql.SaveNewProfessor(professor)
+			professores = append(professores, professor)
 		case 2:
-			professores := sql.FindAllProfessores()
 			for _, v := range professores {
 				fmt.Println(v.Display())
 			}
